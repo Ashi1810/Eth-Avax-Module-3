@@ -1,90 +1,44 @@
-# Hardhat Boilerplate
+# Create and Mint Token
 
-This repository contains a sample project that you can use as the starting point
-for your Ethereum project. It's also a great fit for learning the basics of
-smart contract development.
+Step 1: Navigate to Project Directory
+Open your terminal and navigate to the root directory of your project where the Solidity contract is located.
 
-This project is intended to be used with the
-[Hardhat Beginners Tutorial](https://hardhat.org/tutorial), but you should be
-able to follow it by yourself by reading the README and exploring its
-`contracts`, `tests`, `scripts` and `frontend` directories.
-
-## Quick start
-
-The first things you need to do are cloning this repository and installing its
-dependencies:
-
-```sh
-git clone https://github.com/NomicFoundation/hardhat-boilerplate.git
-cd hardhat-boilerplate
-npm install
-```
-
-Once installed, let's run Hardhat's testing network:
-
-```sh
+Step 2: Launch the Local Hardhat Network
+In the terminal, execute the following command to start the local Hardhat network:
 npx hardhat node
-```
 
-Then, on a new terminal, go to the repository's root folder and run this to
-deploy your contract:
+Ensure that you have Hardhat installed globally by running:
 
-```sh
-npx hardhat run scripts/deploy.js --network localhost
-```
+npm install --global hardhat
+Step 3: Access Remix IDE
+Launch your web browser and navigate to Remix IDE (https://remix.ethereum.org/).
 
-Finally, we can run the frontend with:
+Step 4: Connect to Local Host
+Within Remix IDE, locate the "Connect to Localhost" button located at the top-right corner. Click on it to establish a connection to your local Hardhat network.
 
-```sh
-cd frontend
-npm install
-npm start
-```
+Step 5: Create the Solidity Contract
+Click on the "+" button in the left panel of Remix IDE to create a new file. Enter the Solidity code for your contract or paste the contents of your .sol file in the editor.
 
-Open [http://localhost:3000/](http://localhost:3000/) to see your Dapp. You will
-need to have [Coinbase Wallet](https://www.coinbase.com/wallet) or [Metamask](https://metamask.io) installed and listening to
-`localhost 8545`.
+Example Contract:
 
-## User Guide
+solidity
 
-You can find detailed instructions on using this repository and many tips in [its documentation](https://hardhat.org/tutorial).
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.19;
 
-- [Writing and compiling contracts](https://hardhat.org/tutorial/writing-and-compiling-contracts/)
-- [Setting up the environment](https://hardhat.org/tutorial/setting-up-the-environment/)
-- [Testing Contracts](https://hardhat.org/tutorial/testing-contracts/)
-- [Setting up your wallet](https://hardhat.org/tutorial/boilerplate-project#how-to-use-it)
-- [Hardhat's full documentation](https://hardhat.org/docs/)
+contract Token {
+    // Contract code here...
+}
+Step 6: Compile the Contract
+In the Remix IDE, switch to the "Solidity Compiler" tab from the left panel. Ensure that the compiler version matches the pragma statement in your contract. Click on the "Compile" button to compile the contract.
 
-For a complete introduction to Hardhat, refer to [this guide](https://hardhat.org/getting-started/#overview).
+Step 7: Deploy and Interact with the Contract
+Move to the "Deploy & Run Transactions" tab within the Remix IDE. From the "Environment" dropdown, select "Injected Web3" to connect Remix to your local Hardhat network.
 
-## What's Included?
+Under the "Deployed Contracts" section, click on the contract name. This will display the contract's functions and variables. You can now deploy the contract by clicking the "Deploy" button.
 
-This repository uses our recommended hardhat setup, by using our [`@nomicfoundation/hardhat-toolbox`](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-toolbox). When you use this plugin, you'll be able to:
+Once the contract is deployed, you can interact with its functions by entering the required parameters and clicking the respective function buttons.
 
-- Deploy and interact with your contracts using [ethers.js](https://docs.ethers.io/v5/) and the [`hardhat-ethers`](https://hardhat.org/hardhat-runner/plugins/nomiclabs-hardhat-ethers) plugin.
-- Test your contracts with [Mocha](https://mochajs.org/), [Chai](https://chaijs.com/) and our own [Hardhat Chai Matchers](https://hardhat.org/hardhat-chai-matchers) plugin.
-- Interact with Hardhat Network with our [Hardhat Network Helpers](https://hardhat.org/hardhat-network-helpers).
-- Verify the source code of your contracts with the [hardhat-etherscan](https://hardhat.org/hardhat-runner/plugins/nomiclabs-hardhat-etherscan) plugin.
-- Get metrics on the gas used by your contracts with the [hardhat-gas-reporter](https://github.com/cgewecke/hardhat-gas-reporter) plugin.
-- Measure your tests coverage with [solidity-coverage](https://github.com/sc-forks/solidity-coverage).
+Congratulations! You have now successfully connected your local Hardhat network to Remix IDE, deployed your Solidity contract, and are ready to interact with its functions.
 
-This project also includes [a sample frontend/Dapp](./frontend), which uses [Create React App](https://github.com/facebook/create-react-app).
-
-## Troubleshooting
-
-- `Invalid nonce` errors: if you are seeing this error on the `npx hardhat node`
-  console, try resetting your Metamask account. This will reset the account's
-  transaction history and also the nonce. Open Metamask, click on your account
-  followed by `Settings > Advanced > Clear activity tab data`.
-
-## Setting up your editor
-
-[Hardhat for Visual Studio Code](https://hardhat.org/hardhat-vscode) is the official Hardhat extension that adds advanced support for Solidity to VSCode. If you use Visual Studio Code, give it a try!
-
-## Getting help and updates
-
-If you need help with this project, or with Hardhat in general, please read [this guide](https://hardhat.org/hardhat-runner/docs/guides/getting-help) to learn where and how to get it.
-
-For the latest news about Hardhat, [follow us on Twitter](https://twitter.com/HardhatHQ), and don't forget to star [our GitHub repository](https://github.com/NomicFoundation/hardhat)!
-
-**Happy _building_!**
+Please customize the Token contract as needed, adding relevant information and code to suit your specific contract requirements.
